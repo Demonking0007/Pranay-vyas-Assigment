@@ -1,0 +1,18 @@
+with python
+read URL("https://www.amazon.in/s?k=bags&crid=2M096C61O4MLT&qid=1653308124&sprefix=ba%2Caps%2C283&ref=sr_pg_1") and parse it with Beautifulsoup
+
+find all
+div class="puis-card-container s-card-container s-overflow-hidden aok-relative puis-include-content-margin puis puis-v3vtwxgppca0z12v18v51zrqona s-latency-cf-section s-card-border"
+for all divs
+
+try find span with class="a-size-medium a-color-base a-text-normal" and store it to Product_Name
+except Product_Name = " "
+try find span with class="a-price-whole" and store it to Product_Price
+except Product_Price = " "
+try find span withclass="a-icon-alt" and store it to Product_Reviews
+try find a with class="a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal" target="_blank" href="/sspa/click?" and store it to Product_Url
+except Product_Url = " "
+
+open an excel file and write  Product_Name, Product_Price and Product_Reviews
+
+
